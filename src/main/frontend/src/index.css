@@ -1,0 +1,267 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  margin: 0;
+  font-family: 'Jomhuria', cursive;
+  background: black;
+  color: white;
+}
+
+.article-left {
+  display: block;
+  height: 850px;
+  width: 50%;
+  /*border-right: solid 5px rgba(78, 210, 213, 0.68);*/
+}
+
+.data-time-block {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  top: 30px;
+}
+
+.time-block {
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  font-size: 160px;
+  width: 100%;
+  height: 100%;
+}
+
+.time p {
+  border-bottom: solid 7px #4ed2d5;
+}
+
+.calendar-month-day-block {
+  height: 100%;
+  width: 50%;
+  display: inline-block;
+  position: absolute;
+}
+
+.calendar-block {
+  width: 40%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  right: 190px;
+}
+
+.calendar {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  background: rgba(78, 210, 213, 0.68);
+  /*border: solid 2px #4ed2d5;*/
+  border-radius: 20px;
+}
+
+#calendar-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.month-day-block {
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+.day-month {
+  width: 100%;
+  height: 100%;
+  line-height: 60%;
+  font-size: 90px;
+  display: flex;
+  justify-content: center;
+}
+
+.day-month p {
+  border-bottom: solid 7px #4ed2d5;
+}
+
+
+.weather-block {
+  /*background: greenyellow;*/
+  height: 500px;
+  width: 100%;
+  position: relative;
+  top: 200px;
+}
+
+.weather-icon-block {
+  width: 50%;
+  height: 100%;
+  /*background: orange;*/
+  position: relative;
+}
+
+.day-name-today {
+  width: 100%;
+  height: 15%;
+  font-size: 50px;
+}
+
+.day-name-today p {
+  position: absolute;
+  right: 0;
+}
+
+#day-name-today-title {
+  height: 2.5rem;
+  border-bottom: solid 5px #4ed2d5;
+}
+
+.today-weather-image {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  top: 55px;
+}
+
+.weather-icon {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.today-weather-description {
+  width: 100%;
+  height: 25%;
+  /*background: greenyellow;*/
+  position: absolute;
+  top: 280px;
+}
+
+.today-weather-description p {
+  position: absolute;
+  right: 0;
+  font-size: 35px;
+}
+
+.today-weather-description p strong {
+  font-size: 130px;
+}
+
+.forecast-block-1, .forecast-block-2, .forecast-block-3 {
+  height: 33%;
+  width: 45%;
+  /*background: greenyellow;*/
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.forecast-block-1 {
+  top: 0;
+}
+
+.forecast-block-2 {
+  top: 130px;
+}
+
+.forecast-block-3 {
+  top: 260px;
+}
+
+.forecast-day-name {
+  height: 30%;
+  width: 100%;
+  font-size: 50px;
+}
+
+.forecast-day-name p {
+  width: 5rem;
+  height: 2.5rem;
+  border-bottom: solid 5px #4ed2d5;
+}
+
+.forecast-weather-image-description {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+}
+
+.forecast-weather-description {
+  font-size: 50px;
+  position: absolute;
+  left: 115px;
+}
+
+
+.article-right {
+  display: block;
+  height: 850px;
+
+  /*todo 50% исправить*/
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  /*background: greenyellow;*/
+}
+
+.plans-title-block {
+  height: 10%;
+  width: 100%;
+  /*background: orange;*/
+  display: flex;
+  justify-content: center;
+}
+
+.plans-title-block p {
+  height: 5rem;
+  width: 17rem;
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+  border-bottom: solid 7px #4ed2d5;
+}
+
+.plan-block {
+  height: 20%;
+  width: 100%;
+  /*background: blueviolet;*/
+  margin-top: 3px;
+}
+
+.task-index {
+  font-size: 50px;
+  width: 5.1rem;
+  height: 2.2rem;
+  border-bottom: solid 5px #4ed2d5;
+}
+
+.deadline, .author, .plan-description {
+  margin-top: 2px;
+  margin-left: 15px;
+  font-size: 35px;
+}
