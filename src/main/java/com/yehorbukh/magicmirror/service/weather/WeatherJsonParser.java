@@ -55,18 +55,59 @@ public class WeatherJsonParser {
         return kelvinTemp - 273.15;
     }
 
-    public Weather parseWeatherJson(String weatherJson) {
-        var parser = new JSONObject(weatherJson);
-        var weatherModel = new Weather();
-
-        int weatherValue = parser.getJSONArray("weather").getJSONObject(0).getInt("id");
+    /**
+     * Parses required information of json
+     */
+    private void parseDay(JSONObject jsonObj, Weather weatherModel) {
+        int weatherValue = jsonObj.getJSONArray("weather").getJSONObject(0).getInt("id");
         setWeatherType(weatherModel, weatherValue);
 
         int temperature = (int) Math.round(
-                kelvinToCelsius(parser.getJSONObject("main").getDouble("temp")));
+                kelvinToCelsius(jsonObj.getJSONObject("main").getDouble("temp")));
         weatherModel.setTemperature(temperature);
+    }
 
-        weatherModel.setLocality(parser.getString("name"));
+    /**
+     * This method has some magic numbers which relates to the structure of json response.
+     * @param weatherJson json response which contains information about weather
+     * @param daysRequire a number of days of the forecast
+     * @return {@code Weather} object which contains today weather info and forecast
+     */
+    public Weather parseWeatherJson(String weatherJson, int daysRequire) {
+        if (daysRequire > 5)
+            daysRequire = 5;
+
+        var daysArray = new JSONObject(weatherJson).getJSONArray("list");
+
+        // the parsed result
+        var weatherModel = new Weather();
+        JSONObject dayJson;
+        int jsonIndex = 0;
+
+        // daysRequire + 1 to include current day
+        for (int i = 0; i < daysRequire + 1; i++) {
+            if (i == 0) {
+                dayJson = daysArray.getJSONObject(jsonIndex++);
+                parseDay(dayJson, weatherModel);
+
+                int currentDay = Integer.parseInt(dayJson.getString("dt_txt").substring(8, 10));
+                int parsedDay = currentDay;
+
+                while (parsedDay == currentDay) {
+                    dayJson = daysArray.getJSONObject(jsonIndex++);
+                    parsedDay = Integer.parseInt(dayJson.getString("dt_txt").substring(8, 10));
+                }
+
+                jsonIndex--;
+            } else {
+                jsonIndex += 4;
+                var forecast = new Weather();
+                dayJson = daysArray.getJSONObject(jsonIndex);
+                parseDay(dayJson, forecast);
+                weatherModel.getForecast().add(forecast);
+                jsonIndex += 4;
+            }
+        }
         return weatherModel;
     }
 }

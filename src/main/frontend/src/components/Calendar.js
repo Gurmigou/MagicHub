@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 function Calendar() {
     const days = ['Sun.', 'Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.'];
-    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const months = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'August', 'Sep.', 'Oct.', 'Nov.', 'Dec.'];
 
     const now = new Date();
     let dayOfWeek = now.getDay();

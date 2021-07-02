@@ -43,6 +43,8 @@ body {
   width: 50%;
   height: 100%;
   display: inline-block;
+  position: relative;
+  left: 10px;
 }
 
 .time {
@@ -51,9 +53,6 @@ body {
   font-size: 160px;
   width: 100%;
   height: 100%;
-}
-
-.time p {
   border-bottom: solid 7px #4ed2d5;
 }
 
@@ -90,24 +89,19 @@ body {
 .month-day-block {
   width: 50%;
   height: 100%;
-  display: inline-block;
   position: absolute;
+  display: flex;
+  justify-content: center;
   right: 0;
 }
 
 .day-month {
-  width: 100%;
+  width: 50%;
   height: 100%;
   line-height: 60%;
   font-size: 90px;
-  display: flex;
-  justify-content: center;
-}
-
-.day-month p {
   border-bottom: solid 7px #4ed2d5;
 }
-
 
 .weather-block {
   /*background: greenyellow;*/
@@ -142,7 +136,7 @@ body {
 
 .today-weather-image {
   width: 100%;
-  height: 60%;
+  height: 55%;
   position: absolute;
   top: 55px;
 }
@@ -155,7 +149,6 @@ body {
 .today-weather-description {
   width: 100%;
   height: 25%;
-  /*background: greenyellow;*/
   position: absolute;
   top: 280px;
 }
@@ -173,7 +166,6 @@ body {
 .forecast-block-1, .forecast-block-2, .forecast-block-3 {
   height: 33%;
   width: 45%;
-  /*background: greenyellow;*/
   position: absolute;
   right: 0;
   top: 0;
@@ -220,19 +212,15 @@ body {
 .article-right {
   display: block;
   height: 850px;
-
-  /*todo 50% исправить*/
   width: 50%;
   position: absolute;
   right: 0;
   top: 0;
-  /*background: greenyellow;*/
 }
 
 .plans-title-block {
   height: 10%;
   width: 100%;
-  /*background: orange;*/
   display: flex;
   justify-content: center;
 }
@@ -249,7 +237,6 @@ body {
 .plan-block {
   height: 20%;
   width: 100%;
-  /*background: blueviolet;*/
   margin-top: 3px;
 }
 

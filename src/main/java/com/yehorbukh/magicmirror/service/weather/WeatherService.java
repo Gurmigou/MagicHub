@@ -19,12 +19,9 @@ public class WeatherService {
     /** An API key to get weather */
     private static final String KEY = "5a389c49c495639d5153758bca6606ac";
 
-
     private static final String apiURL = "https://api.openweathermap.org" +
-            "/data/2.5/forecast/daily?q={REGION}&cnt=4&appid=" + KEY;
+                                         "/data/2.5/forecast?q={REGION}&appid=" + KEY;
 
-//    private static final String apiURL = "https://api.openweathermap.org" +
-//                            "/data/2.5/weather?q={REGION}&appid=" + KEY;
 
     @Setter(onMethod=@__({@Autowired}))
     private WeatherJsonParser weatherJsonParser;
@@ -36,20 +33,18 @@ public class WeatherService {
     /**
      * Updates the weather using <a href="https://openweathermap.org/">openweather</a> api.
      * @param locality a place where to find weather
+     * @param numOfDays a required number of days of the forecast
      * @return weather model
      */
-    public Weather getWeather(String locality)
+    public Weather getWeather(String locality, int numOfDays)
             throws IOException, InterruptedException {
         String weatherJson = findNewWeatherJSON(locality);
-
-        return parseWeatherJSON(weatherJson);
+        return parseWeatherJSON(weatherJson, numOfDays);
     }
 
-    private Weather parseWeatherJSON(String weatherJson) {
-        var weather = weatherJsonParser.parseWeatherJson(weatherJson);
-
+    private Weather parseWeatherJSON(String weatherJson, int numOfDays) {
+        var weather = weatherJsonParser.parseWeatherJson(weatherJson, numOfDays);
         log.info("WeatherToday JSON have been parsed.");
-
         return weather;
     }
 

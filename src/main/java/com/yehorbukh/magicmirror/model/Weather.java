@@ -4,6 +4,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @NoArgsConstructor
 @Getter
 @Setter
@@ -19,4 +22,7 @@ public class Weather {
     private boolean snow;
 
     private int temperature;
+
+    /** Weather forecast */
+    private final List<Weather> forecast = new ArrayList<>();
 }
