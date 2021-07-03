@@ -68,7 +68,7 @@ body {
   height: 100%;
   display: inline-block;
   position: absolute;
-  right: 190px;
+  right: 175px;
 }
 
 .calendar {
@@ -221,11 +221,26 @@ body {
 .plans-title-block {
   height: 10%;
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
-.plans-title-block p {
+.plans-title-block-inner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.title {
+  /*background: greenyellow;*/
+  height: 100%;
+  width: 38%;
+  display: inline-block;
+  /*display: flex;*/
+  /*justify-content: left;*/
+}
+
+.title p {
   height: 5rem;
   width: 17rem;
   display: flex;
@@ -234,10 +249,32 @@ body {
   border-bottom: solid 7px #4ed2d5;
 }
 
+.edit-plans-button-div {
+  height: 100%;
+  width: 13%;
+}
+
+.edit-plans-button {
+  height: 100%;
+  width: 100%;
+  /*display: inline-block;*/
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  background: #4ed2d5;
+}
+
+#edit-img {
+  max-height: 90%;
+  max-width: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
 .plan-block {
   height: 20%;
   width: 100%;
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 .task-index {
