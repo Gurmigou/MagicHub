@@ -19,4 +19,4 @@
    - study JavaScript and React.js framework
    - practise HTML/CSS
 
-## ! These project isn't completed yet and is still being developing. I have to create CRUD operations to configure user plans !
+### ! These project isn't completed yet and is still being developing. I have to create CRUD operations to configure user plans !
