@@ -18,5 +18,6 @@
 3) work with front-end:
    - study JavaScript and React.js framework
    - practise HTML/CSS
+4) practice working with JSON data format  
 
 ### ! This project isn't completed yet and is still being developing. I have to create CRUD operations to configure user plans !
