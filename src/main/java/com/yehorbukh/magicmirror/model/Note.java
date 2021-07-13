@@ -17,6 +17,7 @@ public class Note {
     private String description;
     private Date creationDate;
     private Date deadlineDate;
+    private Long id;
 
     public static Note toNote(NoteEntity noteEntity) {
         var note = new Note();
@@ -24,6 +25,7 @@ public class Note {
         note.description = noteEntity.getDescription();
         note.creationDate = noteEntity.getCreationDate();
         note.deadlineDate = noteEntity.getDeadlineDate();
+        note.id = noteEntity.getId();
         return note;
     }
 }

@@ -1,0 +1,27 @@
+input {
+    height: 50px;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+.input-pop-up {
+    display: block;
+    width: 80%;
+    margin: 15px auto 20px;
+    border-radius: 5px;
+}
+
+.submit-button {
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    padding: 13px 30px;
+}
+
+.submit-pop-up {
+    display: block;
+    height: 100%;
+    width: 30%;
+    font-size: 20px;
+    background: #4ed2d5;
+}

@@ -1,0 +1,33 @@
+.modal {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*прозрачность*/
+    opacity: 0;
+
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content {
+    min-height: 35%;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    font-size: 45px;
+    width: 50vw;
+    transition: 0.1s all;
+}
