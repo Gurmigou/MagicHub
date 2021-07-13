@@ -20,7 +20,7 @@ function UpdateCurrentPlan({onToggle, setActivityState, curDeadLine, curAuthor, 
 
     return (
         <ModalIconContent
-            buttonText={"Добавить"}
+            buttonText={"Update"}
             onButtonClickAction={() => {
                 setActivityState("off");
                 updatePlan();
