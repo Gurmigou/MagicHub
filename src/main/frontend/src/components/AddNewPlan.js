@@ -23,7 +23,7 @@ function AddNewPlan({onToggle, setActivityState}) {
 
     return (
         <ModalIconContent
-            buttonText={"Добавить"}
+            buttonText={"Add"}
             onButtonClickAction={() => {
                 setActivityState("off");
                 addPlan();
