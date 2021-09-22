@@ -17,7 +17,7 @@ import java.net.http.HttpResponse;
 @Slf4j
 public class WeatherService {
     /** An API key to get weather */
-    private static final String KEY = "5a389c49c495639d5153758bca6606ac";
+    private static final String KEY = "API_KEY";
 
     private static final String apiURL = "https://api.openweathermap.org" +
                                          "/data/2.5/forecast?q={REGION}&appid=" + KEY;
